@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:poolTrack="clr-namespace:PoolTrack" x:Class="PoolTrack.AppShell"
+       Title="PoolTrack">
+    <TabBar>
+        <Tab Title="Dashboard" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate poolTrack:MainPage}" />
+        </Tab>
+        <Tab Title="Test Entry" Icon="test.png">
+            <ShellContent ContentTemplate="{DataTemplate poolTrack:TestEntryPage}" />
+        </Tab>
+        <Tab Title="History" Icon="history.png">
+            <ShellContent ContentTemplate="{DataTemplate poolTrack:HistoryPage}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

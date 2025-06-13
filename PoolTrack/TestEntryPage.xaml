@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PoolTrack.TestEntryPage"
+             Title="Enter Test Results"
+             BackgroundColor="#F2F8FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+            <Label Text="Log New Pool Test"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#1E3A5F" />
+
+            <!-- Input Card -->
+            <Frame CornerRadius="12"
+                   Padding="20"
+                   BackgroundColor="White"
+                   HasShadow="True">
+                <VerticalStackLayout Spacing="14">
+                    <Entry x:Name="pHEntry"
+                           Placeholder="pH Level (e.g., 7.4)"
+                           Keyboard="Numeric"
+                           BackgroundColor="#EFF6FB"
+                           HeightRequest="48"
+                           Margin="0"
+                           FontSize="16"/>
+
+                    <Entry x:Name="chlorineEntry"
+                           Placeholder="Chlorine (ppm)"
+                           Keyboard="Numeric"
+                           BackgroundColor="#EFF6FB"
+                           HeightRequest="48"
+                           FontSize="16"/>
+                    <Entry x:Name="chlorineFreeEntry"
+                           Placeholder="Free Chlorine (ppm)"
+                           Keyboard="Numeric"
+                           BackgroundColor="#EFF6FB"
+                           HeightRequest="48"
+                           FontSize="16"/>
+
+                    <Entry x:Name="alkalinityEntry"
+                           Placeholder="Alkalinity (ppm)"
+                           Keyboard="Numeric"
+                           BackgroundColor="#EFF6FB"
+                           HeightRequest="48"
+                           FontSize="16"/>
+
+                    <Entry x:Name="calciumEntry"
+                           Placeholder="Calcium Hardness (ppm)"
+                           Keyboard="Numeric"
+                           BackgroundColor="#EFF6FB"
+                           HeightRequest="48"
+                           FontSize="16"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Save Button -->
+            <Button Text="Save Test"
+                    Command="{Binding SaveTestCommand}"
+                    BackgroundColor="#0077B6"
+                    TextColor="White"
+                    FontSize="16"
+                    HeightRequest="50"
+                    CornerRadius="10"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,40 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoolTrack", "PoolTrack\PoolTrack.csproj", "{8D0B119E-AFED-4E33-B0DB-9E751DFBACDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoolTrack.Droid", "PoolTrack.Droid\PoolTrack.Droid.csproj", "{04BC39B4-E634-4AB0-A3DD-982DBF0E8A34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoolTrack.iOS", "PoolTrack.iOS\PoolTrack.iOS.csproj", "{0459DA59-78E8-4EEA-9551-AFF5784A7F0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D0B119E-AFED-4E33-B0DB-9E751DFBACDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D0B119E-AFED-4E33-B0DB-9E751DFBACDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D0B119E-AFED-4E33-B0DB-9E751DFBACDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D0B119E-AFED-4E33-B0DB-9E751DFBACDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04BC39B4-E634-4AB0-A3DD-982DBF0E8A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BC39B4-E634-4AB0-A3DD-982DBF0E8A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BC39B4-E634-4AB0-A3DD-982DBF0E8A34}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{04BC39B4-E634-4AB0-A3DD-982DBF0E8A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BC39B4-E634-4AB0-A3DD-982DBF0E8A34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04BC39B4-E634-4AB0-A3DD-982DBF0E8A34}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0459DA59-78E8-4EEA-9551-AFF5784A7F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0459DA59-78E8-4EEA-9551-AFF5784A7F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0459DA59-78E8-4EEA-9551-AFF5784A7F0A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0459DA59-78E8-4EEA-9551-AFF5784A7F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0459DA59-78E8-4EEA-9551-AFF5784A7F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0459DA59-78E8-4EEA-9551-AFF5784A7F0A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F863E835-481F-475E-B755-D8153FAB3919}
+	EndGlobalSection
+EndGlobal

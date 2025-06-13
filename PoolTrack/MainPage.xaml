@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
+             x:Class="PoolTrack.MainPage"
+             Title="Dashboard">
+    <VerticalStackLayout Padding="20">
+        <controls:Border Stroke="LightBlue" StrokeThickness="1" BackgroundColor="LightBlue" Padding="15">
+            <controls:Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </controls:Border.StrokeShape>
+            <VerticalStackLayout>
+                <Label Text="pH: 7.4 | Chlorine: 2.0 ppm" FontSize="16"/>
+                <Label Text="Alkalinity: 100 ppm | Calcium: 200 ppm" FontSize="16"/>
+            </VerticalStackLayout>
+        </controls:Border>
+
+        <Button Text="Enter New Test" Command="{Binding NavigateToTestEntry}" BackgroundColor="Blue" TextColor="White"/>
+    </VerticalStackLayout>
+
+</ContentPage>
