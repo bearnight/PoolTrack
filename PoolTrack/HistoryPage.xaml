@@ -1,38 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PoolTrack.HistoryPage"
              Title="Test History"
-             BackgroundColor="#F2F8FA">
+             BackgroundColor="{StaticResource PageBackground}">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="16">
-            <Label Text="Test History"
-                   FontSize="24"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   TextColor="#1E3A5F" />
-
-            <CollectionView ItemsSource="{Binding TestResults}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame CornerRadius="12"
-                               Padding="16"
-                               Margin="0,8"
-                               BackgroundColor="White"
-                               HasShadow="True">
-                            <VerticalStackLayout Spacing="6">
+    <Grid>
+        <CollectionView ItemsSource="{Binding TestResults}"
+                        Margin="20,0"
+                        VerticalOptions="Fill">
+            <CollectionView.Header>
+                <Label Text="Test History"
+                       Style="{StaticResource SectionHeader}"
+                       Margin="0,20,0,8"
+                       HorizontalOptions="Center" />
+            </CollectionView.Header>
+            <CollectionView.EmptyView>
+                <VerticalStackLayout Padding="40"
+                                     Spacing="12"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center">
+                    <Label Text="No tests recorded yet"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           TextColor="{StaticResource DeepNavy}" />
+                    <Label Text="Log your first pool test from the Test Entry tab."
+                           FontSize="14"
+                           HorizontalTextAlignment="Center"
+                           TextColor="{StaticResource TextMuted}" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Style="{StaticResource Card}"
+                            Margin="0,6">
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="*,Auto">
                                 <Label Text="{Binding Date}"
-                                       FontSize="18"
+                                       FontSize="16"
                                        FontAttributes="Bold"
-                                       TextColor="#0077B6" />
-                                <Label Text="{Binding Details}"
-                                       FontSize="14"
-                                       TextColor="#333" />
-                            </VerticalStackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </VerticalStackLayout>
-    </ScrollView>
+                                       TextColor="{StaticResource DeepNavy}" />
+                                <Label Grid.Column="1"
+                                       Text="{Binding Status}"
+                                       FontSize="12"
+                                       FontFamily="OpenSansSemibold"
+                                       TextColor="{StaticResource StatusOkText}" />
+                            </Grid>
+                            <BoxView HeightRequest="1"
+                                     Color="{StaticResource CardBorder}" />
+                            <Label Text="{Binding Details}"
+                                   FontSize="14"
+                                   LineBreakMode="WordWrap"
+                                   TextColor="{StaticResource TextPrimary}" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 </ContentPage>

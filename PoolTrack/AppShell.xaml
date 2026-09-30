@@ -5,13 +5,13 @@
        xmlns:poolTrack="clr-namespace:PoolTrack" x:Class="PoolTrack.AppShell"
        Title="PoolTrack">
     <TabBar>
-        <Tab Title="Dashboard" Icon="home.png">
+        <Tab Title="Dashboard">
             <ShellContent ContentTemplate="{DataTemplate poolTrack:MainPage}" />
         </Tab>
-        <Tab Title="Test Entry" Icon="test.png">
+        <Tab Title="Test Entry">
             <ShellContent ContentTemplate="{DataTemplate poolTrack:TestEntryPage}" />
         </Tab>
-        <Tab Title="History" Icon="history.png">
+        <Tab Title="History">
             <ShellContent ContentTemplate="{DataTemplate poolTrack:HistoryPage}" />
         </Tab>
     </TabBar>

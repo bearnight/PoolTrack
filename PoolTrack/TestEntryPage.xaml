@@ -3,67 +3,161 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PoolTrack.TestEntryPage"
              Title="Enter Test Results"
-             BackgroundColor="#F2F8FA">
+             BackgroundColor="{StaticResource PageBackground}">
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="16">
             <Label Text="Log New Pool Test"
-                   FontSize="24"
+                   FontSize="26"
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
-                   TextColor="#1E3A5F" />
+                   TextColor="{StaticResource DeepNavy}" />
 
             <!-- Input Card -->
-            <Frame CornerRadius="12"
-                   Padding="20"
-                   BackgroundColor="White"
-                   HasShadow="True">
-                <VerticalStackLayout Spacing="14">
-                    <Entry x:Name="pHEntry"
-                           Placeholder="pH Level (e.g., 7.4)"
-                           Keyboard="Numeric"
-                           BackgroundColor="#EFF6FB"
-                           HeightRequest="48"
-                           Margin="0"
-                           FontSize="16"/>
+            <Border Style="{StaticResource Card}">
+                <VerticalStackLayout Spacing="16">
 
-                    <Entry x:Name="chlorineEntry"
-                           Placeholder="Chlorine (ppm)"
-                           Keyboard="Numeric"
-                           BackgroundColor="#EFF6FB"
-                           HeightRequest="48"
-                           FontSize="16"/>
-                    <Entry x:Name="chlorineFreeEntry"
-                           Placeholder="Free Chlorine (ppm)"
-                           Keyboard="Numeric"
-                           BackgroundColor="#EFF6FB"
-                           HeightRequest="48"
-                           FontSize="16"/>
+                    <!-- pH -->
+                    <VerticalStackLayout Spacing="6">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label Text="pH"
+                                   FontSize="13"
+                                   FontFamily="OpenSansSemibold"
+                                   TextColor="{StaticResource DeepNavy}" />
+                            <Label Grid.Column="1"
+                                   Text="no unit"
+                                   FontSize="12"
+                                   TextColor="{StaticResource TextMuted}" />
+                        </Grid>
+                        <Border Stroke="{StaticResource FieldBorder}"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 12"
+                                BackgroundColor="{StaticResource FieldSurface}"
+                                Padding="0">
+                            <Entry x:Name="pHEntry"
+                                   Placeholder="e.g. 7.4"
+                                   Keyboard="Numeric"
+                                   BackgroundColor="Transparent"/>
+                        </Border>
+                        <Label Text="Ideal 7.2 to 7.8"
+                               FontSize="12"
+                               TextColor="{StaticResource TextMuted}" />
+                    </VerticalStackLayout>
 
-                    <Entry x:Name="alkalinityEntry"
-                           Placeholder="Alkalinity (ppm)"
-                           Keyboard="Numeric"
-                           BackgroundColor="#EFF6FB"
-                           HeightRequest="48"
-                           FontSize="16"/>
+                    <!-- Total Chlorine -->
+                    <VerticalStackLayout Spacing="6">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label Text="Total Chlorine"
+                                   FontSize="13"
+                                   FontFamily="OpenSansSemibold"
+                                   TextColor="{StaticResource DeepNavy}" />
+                            <Label Grid.Column="1"
+                                   Text="ppm"
+                                   FontSize="12"
+                                   TextColor="{StaticResource TextMuted}" />
+                        </Grid>
+                        <Border Stroke="{StaticResource FieldBorder}"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 12"
+                                BackgroundColor="{StaticResource FieldSurface}"
+                                Padding="0">
+                            <Entry x:Name="chlorineEntry"
+                                   Placeholder="e.g. 2.5"
+                                   Keyboard="Numeric"
+                                   BackgroundColor="Transparent"/>
+                        </Border>
+                        <Label Text="Ideal 1 to 4 ppm"
+                               FontSize="12"
+                               TextColor="{StaticResource TextMuted}" />
+                    </VerticalStackLayout>
 
-                    <Entry x:Name="calciumEntry"
-                           Placeholder="Calcium Hardness (ppm)"
-                           Keyboard="Numeric"
-                           BackgroundColor="#EFF6FB"
-                           HeightRequest="48"
-                           FontSize="16"/>
+                    <!-- Free Chlorine -->
+                    <VerticalStackLayout Spacing="6">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label Text="Free Chlorine"
+                                   FontSize="13"
+                                   FontFamily="OpenSansSemibold"
+                                   TextColor="{StaticResource DeepNavy}" />
+                            <Label Grid.Column="1"
+                                   Text="ppm"
+                                   FontSize="12"
+                                   TextColor="{StaticResource TextMuted}" />
+                        </Grid>
+                        <Border Stroke="{StaticResource FieldBorder}"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 12"
+                                BackgroundColor="{StaticResource FieldSurface}"
+                                Padding="0">
+                            <Entry x:Name="chlorineFreeEntry"
+                                   Placeholder="e.g. 2.0"
+                                   Keyboard="Numeric"
+                                   BackgroundColor="Transparent"/>
+                        </Border>
+                        <Label Text="Ideal 1 to 3 ppm"
+                               FontSize="12"
+                               TextColor="{StaticResource TextMuted}" />
+                    </VerticalStackLayout>
+
+                    <!-- Alkalinity -->
+                    <VerticalStackLayout Spacing="6">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label Text="Total Alkalinity"
+                                   FontSize="13"
+                                   FontFamily="OpenSansSemibold"
+                                   TextColor="{StaticResource DeepNavy}" />
+                            <Label Grid.Column="1"
+                                   Text="ppm"
+                                   FontSize="12"
+                                   TextColor="{StaticResource TextMuted}" />
+                        </Grid>
+                        <Border Stroke="{StaticResource FieldBorder}"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 12"
+                                BackgroundColor="{StaticResource FieldSurface}"
+                                Padding="0">
+                            <Entry x:Name="alkalinityEntry"
+                                   Placeholder="e.g. 100"
+                                   Keyboard="Numeric"
+                                   BackgroundColor="Transparent"/>
+                        </Border>
+                        <Label Text="Ideal 80 to 120 ppm"
+                               FontSize="12"
+                               TextColor="{StaticResource TextMuted}" />
+                    </VerticalStackLayout>
+
+                    <!-- Calcium -->
+                    <VerticalStackLayout Spacing="6">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label Text="Calcium Hardness"
+                                   FontSize="13"
+                                   FontFamily="OpenSansSemibold"
+                                   TextColor="{StaticResource DeepNavy}" />
+                            <Label Grid.Column="1"
+                                   Text="ppm"
+                                   FontSize="12"
+                                   TextColor="{StaticResource TextMuted}" />
+                        </Grid>
+                        <Border Stroke="{StaticResource FieldBorder}"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 12"
+                                BackgroundColor="{StaticResource FieldSurface}"
+                                Padding="0">
+                            <Entry x:Name="calciumEntry"
+                                   Placeholder="e.g. 250"
+                                   Keyboard="Numeric"
+                                   BackgroundColor="Transparent"/>
+                        </Border>
+                        <Label Text="Ideal 200 to 400 ppm"
+                               FontSize="12"
+                               TextColor="{StaticResource TextMuted}" />
+                    </VerticalStackLayout>
+
                 </VerticalStackLayout>
-            </Frame>
+            </Border>
 
             <!-- Save Button -->
             <Button Text="Save Test"
-                    Command="{Binding SaveTestCommand}"
-                    BackgroundColor="#0077B6"
-                    TextColor="White"
-                    FontSize="16"
-                    HeightRequest="50"
-                    CornerRadius="10"/>
+                    Command="{Binding SaveTestCommand}"/>
         </VerticalStackLayout>
     </ScrollView>
 

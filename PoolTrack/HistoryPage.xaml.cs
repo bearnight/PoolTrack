@@ -5,29 +5,32 @@ namespace PoolTrack;
 
 public partial class HistoryPage : ContentPage
 {
+    private readonly HistoryViewModel _viewModel;
+
     public HistoryPage()
     {
         InitializeComponent();
-        BindingContext = new HistoryViewModel();
+        _viewModel = new HistoryViewModel();
+        BindingContext = _viewModel;
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        _viewModel.Reload();
     }
 }
 
 public class HistoryViewModel
 {
-    public ObservableCollection<TestResult> TestResults { get; set; }
+    public ObservableCollection<TestResult> TestResults { get; } = new();
 
-    public HistoryViewModel()
+    public void Reload()
     {
-        TestResults = new ObservableCollection<TestResult>
+        TestResults.Clear();
+        foreach (var result in PoolStore.Current.GetResults(PoolStore.Current.ActivePoolId))
         {
-            new TestResult { Date = "March 30, 2025", Details = "pH: 7.5, Chlorine: 2.2 ppm" },
-            new TestResult { Date = "March 25, 2025", Details = "pH: 7.3, Chlorine: 1.8 ppm" }
-        };
+            TestResults.Add(result);
+        }
     }
-}
-
-public class TestResult
-{
-    public string Date { get; set; }
-    public string Details { get; set; }
 }

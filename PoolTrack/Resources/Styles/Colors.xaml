@@ -5,19 +5,46 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <!-- Note: For Android please see also Platforms\Android\Resources\values\colors.xml -->
+    <Color x:Key="Primary">#0077B6</Color>
+    <Color x:Key="PrimaryPressed">#005B8F</Color>
+    <Color x:Key="PrimaryBright">#4FB3E8</Color>
+    <Color x:Key="Secondary">#90E0EF</Color>
+    <Color x:Key="DeepNavy">#1E3A5F</Color>
+    <Color x:Key="DeepNavyDark">#B8D8EA</Color>
 
-    <Color x:Key="Primary">#512BD4</Color>
-    <Color x:Key="PrimaryDark">#ac99ea</Color>
-    <Color x:Key="PrimaryDarkText">#242424</Color>
-    <Color x:Key="Secondary">#DFD8F7</Color>
-    <Color x:Key="SecondaryDarkText">#9880e5</Color>
-    <Color x:Key="Tertiary">#2B0B98</Color>
+    <Color x:Key="PageBackground">#F2F8FA</Color>
+    <Color x:Key="PageBackgroundDark">#0B1E28</Color>
+    <Color x:Key="CardSurface">#FFFFFF</Color>
+    <Color x:Key="CardSurfaceDark">#12293A</Color>
+    <Color x:Key="CardBorder">#E3EEF4</Color>
+    <Color x:Key="CardBorderDark">#254A63</Color>
+    <Color x:Key="FieldSurface">#EFF6FB</Color>
+    <Color x:Key="FieldSurfaceDark">#16293A</Color>
+    <Color x:Key="FieldBorder">#D7E7F1</Color>
+    <Color x:Key="FieldBorderDark">#2C5170</Color>
+
+    <Color x:Key="TextPrimary">#1F2937</Color>
+    <Color x:Key="TextPrimaryDark">#E8EEF2</Color>
+    <Color x:Key="TextMuted">#5B7282</Color>
+    <Color x:Key="TextMutedDark">#8FA9BD</Color>
+    <Color x:Key="Inverse">#FFFFFF</Color>
+    <Color x:Key="InverseDark">#0B1E28</Color>
+
+    <Color x:Key="StatusOk">#2A9D8F</Color>
+    <Color x:Key="StatusOkDark">#6BC5B8</Color>
+    <Color x:Key="StatusOkText">#17685E</Color>
+    <Color x:Key="StatusOkTextDark">#6BC5B8</Color>
+    <Color x:Key="StatusWarn">#C77424</Color>
+    <Color x:Key="StatusWarnDark">#E8A15C</Color>
+    <Color x:Key="StatusWarnText">#8F5412</Color>
+    <Color x:Key="StatusWarnTextDark">#E8A15C</Color>
+    <Color x:Key="StatusAlert">#E76F51</Color>
+    <Color x:Key="StatusAlertDark">#F08B72</Color>
+    <Color x:Key="StatusAlertText">#B4432A</Color>
+    <Color x:Key="StatusAlertTextDark">#F08B72</Color>
 
     <Color x:Key="White">White</Color>
     <Color x:Key="Black">Black</Color>
-    <Color x:Key="Magenta">#D600AA</Color>
-    <Color x:Key="MidnightBlue">#190649</Color>
     <Color x:Key="OffBlack">#1f1f1f</Color>
 
     <Color x:Key="Gray100">#E1E1E1</Color>
@@ -30,10 +57,23 @@
     <Color x:Key="Gray950">#141414</Color>
 
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}" />
+    <SolidColorBrush x:Key="PrimaryPressedBrush" Color="{StaticResource PrimaryPressed}" />
+    <SolidColorBrush x:Key="PrimaryBrightBrush" Color="{StaticResource PrimaryBright}" />
     <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}" />
-    <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}" />
+    <SolidColorBrush x:Key="DeepNavyBrush" Color="{StaticResource DeepNavy}" />
+    <SolidColorBrush x:Key="PageBackgroundBrush" Color="{StaticResource PageBackground}" />
+    <SolidColorBrush x:Key="CardSurfaceBrush" Color="{StaticResource CardSurface}" />
+    <SolidColorBrush x:Key="CardBorderBrush" Color="{StaticResource CardBorder}" />
+    <SolidColorBrush x:Key="FieldSurfaceBrush" Color="{StaticResource FieldSurface}" />
+    <SolidColorBrush x:Key="FieldBorderBrush" Color="{StaticResource FieldBorder}" />
+    <SolidColorBrush x:Key="TextPrimaryBrush" Color="{StaticResource TextPrimary}" />
+    <SolidColorBrush x:Key="TextMutedBrush" Color="{StaticResource TextMuted}" />
     <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}" />
     <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}" />
+
+    <SolidColorBrush x:Key="StatusOkBrush" Color="{StaticResource StatusOk}" />
+    <SolidColorBrush x:Key="StatusWarnBrush" Color="{StaticResource StatusWarn}" />
+    <SolidColorBrush x:Key="StatusAlertBrush" Color="{StaticResource StatusAlert}" />
 
     <SolidColorBrush x:Key="Gray100Brush" Color="{StaticResource Gray100}" />
     <SolidColorBrush x:Key="Gray200Brush" Color="{StaticResource Gray200}" />

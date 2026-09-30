@@ -5,18 +5,23 @@
              xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
              x:Class="PoolTrack.MainPage"
              Title="Dashboard">
-    <VerticalStackLayout Padding="20">
-        <controls:Border Stroke="LightBlue" StrokeThickness="1" BackgroundColor="LightBlue" Padding="15">
+    <VerticalStackLayout Padding="20" Spacing="12">
+        <Label Text="{Binding ActivePoolName}"
+               Style="{StaticResource SectionHeader}"
+               HorizontalOptions="Center" />
+
+        <controls:Border Stroke="{StaticResource CardBorder}" StrokeThickness="1" BackgroundColor="{StaticResource CardSurface}" Padding="15">
             <controls:Border.StrokeShape>
                 <RoundRectangle CornerRadius="10"/>
             </controls:Border.StrokeShape>
             <VerticalStackLayout>
-                <Label Text="pH: 7.4 | Chlorine: 2.0 ppm" FontSize="16"/>
-                <Label Text="Alkalinity: 100 ppm | Calcium: 200 ppm" FontSize="16"/>
+                <Label Text="Latest Test" FontSize="13" TextColor="{StaticResource TextMuted}"/>
+                <Label Text="{Binding LatestTest}" FontSize="16"/>
             </VerticalStackLayout>
         </controls:Border>
 
-        <Button Text="Enter New Test" Command="{Binding NavigateToTestEntry}" BackgroundColor="Blue" TextColor="White"/>
+        <Button Text="Enter New Test" Command="{Binding NavigateToTestEntry}"/>
+        <Button Text="Manage Pools" Clicked="OnManagePoolsClicked"/>
     </VerticalStackLayout>
 
 </ContentPage>
